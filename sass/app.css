@@ -1,0 +1,244 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  background: url("../images/bg-mobile.svg") no-repeat center fixed;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  width: 1440px;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.container__fylo, .container__usage {
+  background-color: #1d2c67;
+}
+
+.container__fylo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 8rem;
+  margin-bottom: 1.125rem;
+  padding: 2.625rem;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  border-radius: 1rem 7rem 1rem 1rem;
+}
+
+.container__fylo__logo-div {
+  margin-bottom: 2rem;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 98%;
+          flex: 0 0 98%;
+}
+
+.container__fylo__logo-div__logo {
+  width: 65%;
+}
+
+.container__fylo__icon-div {
+  padding: 0.75rem 0.875rem;
+  margin-right: 1rem;
+  background-color: #0c122c;
+  border-radius: 0.75rem;
+}
+
+.container__fylo__icon-div img {
+  vertical-align: middle;
+}
+
+.container__usage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 8rem;
+  color: #dddbff;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  text-align: center;
+  border-radius: 1rem;
+}
+
+.container__usage__used {
+  margin-top: 1.5rem;
+  margin-bottom: 0.725rem;
+}
+
+.container__usage__metar {
+  height: 1rem;
+  background-color: #0c122c;
+  margin-left: 1.7rem;
+  margin-right: 1.7rem;
+  margin-bottom: 0.725rem;
+  border-radius: 1rem;
+}
+
+.container__usage__metar__used {
+  height: 70%;
+  width: 73%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffa399), to(#ff4d97));
+  background-image: linear-gradient(#ffa399, #ff4d97);
+  border-radius: 1rem;
+  position: relative;
+  top: 2px;
+  left: 2px;
+}
+
+.container__usage__metar__used__circle {
+  height: 80%;
+  width: 5%;
+  border-radius: 50%;
+  background-color: white;
+  position: relative;
+  left: 176px;
+  top: 1px;
+}
+
+.container__usage__gb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 1.7rem;
+  margin-right: 1.7rem;
+  margin-bottom: 3rem;
+}
+
+.container__usage__left {
+  background-color: white;
+  color: black;
+  font-size: 2.3rem;
+  margin-left: 4.5rem;
+  margin-right: 4.5rem;
+  position: absolute;
+  padding: 1.2rem;
+  border-radius: 1rem;
+  top: 465px;
+}
+
+.container__usage__left small {
+  font-size: 1rem;
+  color: #848794;
+  position: relative;
+}
+
+.container .attribution {
+  font-size: 11px;
+  text-align: center;
+  color: white;
+}
+
+.container .attribution a {
+  color: #848794;
+}
+
+@media screen and (min-width: 900px) {
+  body {
+    background: url("../images/bg-desktop.svg") no-repeat center bottom;
+    background-color: #0c122c;
+  }
+  .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 32rem;
+    margin-left: 9rem;
+    margin-right: 9rem;
+  }
+  .container__fylo {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    position: relative;
+    bottom: 282px;
+    left: 30px;
+  }
+  .container__fylo__logo-div {
+    margin-bottom: 2rem;
+  }
+  .container__fylo__logo-div__logo {
+    width: 55%;
+  }
+  .container__fylo__icon-div {
+    padding: 0.75rem 0.875rem;
+    margin-right: 1rem;
+    background-color: #0c122c;
+    border-radius: 0.75rem;
+  }
+  .container__fylo__icon-div img {
+    vertical-align: middle;
+  }
+  .container__usage {
+    position: relative;
+    bottom: 136px;
+    left: 48px;
+    width: 50%;
+  }
+  .container__usage__metar__used__circle {
+    height: 65%;
+    width: 2%;
+    left: 370px;
+  }
+  .container__usage__left {
+    margin-left: 0;
+    margin-right: 0;
+    top: -67px;
+    left: 376px;
+  }
+  .container__usage__left::after {
+    content: "";
+    position: absolute;
+    right: 0px;
+    bottom: -13px;
+    height: 27px;
+    border-left: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 23px solid white;
+  }
+  .container__usage__used {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    margin-left: 1.5rem;
+  }
+}
+/*# sourceMappingURL=app.css.map */

@@ -1,0 +1,226 @@
+@import "_variable";
+
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  background: url("../images/bg-mobile.svg") no-repeat center fixed;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  width: 1440px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+
+  &__fylo,
+  &__usage {
+    background-color: $dark-blue;
+  }
+
+  &__fylo {
+    display: flex;
+    margin-top: 8rem;
+    margin-bottom: 1.125rem;
+    padding: 2.625rem;
+    flex-flow: row wrap;
+    border-radius: 1rem 7rem 1rem 1rem;
+
+    &__logo-div {
+      margin-bottom: 2rem;
+      flex: 0 0 98%;
+      &__logo {
+        width: 65%;
+      }
+    }
+
+    &__icon-div {
+      padding: 0.75rem 0.875rem;
+      margin-right: 1rem;
+      background-color: $very-dark-blue;
+      border-radius: 0.75rem;
+
+      img {
+        vertical-align: middle;
+      }
+    }
+  }
+
+  &__usage {
+    display: flex;
+    margin-bottom: 8rem;
+    color: $pale-blue;
+    flex-flow: column;
+    text-align: center;
+    border-radius: 1rem;
+    &__used {
+      margin-top: 1.5rem;
+      margin-bottom: 0.725rem;
+    }
+
+    &__metar {
+      height: 1rem;
+      background-color: $very-dark-blue;
+      margin-left: 1.7rem;
+      margin-right: 1.7rem;
+      margin-bottom: 0.725rem;
+      border-radius: 1rem;
+
+      &__used {
+        height: 70%;
+        width: 73%;
+        background-image: linear-gradient(
+          $bar-gradient-start,
+          $bar-gradient-end
+        );
+        border-radius: 1rem;
+        position: relative;
+        top: 2px;
+        left: 2px;
+
+        &__circle {
+          height: 80%;
+          width: 5%;
+          border-radius: 50%;
+          background-color: white;
+          position: relative;
+          left: 176px;
+          top: 1px;
+        }
+      }
+    }
+
+    &__gb {
+      display: flex;
+      justify-content: space-between;
+      margin-left: 1.7rem;
+      margin-right: 1.7rem;
+      margin-bottom: 3rem;
+    }
+
+    &__left {
+      background-color: white;
+      color: black;
+      font-size: 2.3rem;
+      margin-left: 4.5rem;
+      margin-right: 4.5rem;
+      position: absolute;
+      padding: 1.2rem;
+      border-radius: 1rem;
+      top: 465px;
+
+      small {
+        font-size: 1rem;
+        color: $grayish-blue;
+        position: relative;
+      }
+    }
+  }
+
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+    color: white;
+
+    a {
+      color: $grayish-blue;
+    }
+  }
+}
+
+@media screen and (min-width: 900px) {
+  body {
+    background: url("../images/bg-desktop.svg") no-repeat center bottom;
+    background-color: $very-dark-blue;
+  }
+
+  .container {
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 32rem;
+    margin-left: 9rem;
+    margin-right: 9rem;
+
+    &__fylo {
+      flex-flow: row wrap;
+      //   flex: 0 0 30%;
+      position: relative;
+      bottom: 282px;
+      left: 30px;
+      &__logo-div {
+        margin-bottom: 2rem;
+        &__logo {
+          width: 55%;
+        }
+      }
+
+      &__icon-div {
+        padding: 0.75rem 0.875rem;
+        margin-right: 1rem;
+        background-color: $very-dark-blue;
+        border-radius: 0.75rem;
+
+        img {
+          vertical-align: middle;
+        }
+      }
+    }
+
+    &__usage {
+      //   flex: 0 0 55%;
+      position: relative;
+      bottom: 136px;
+      left: 48px;
+      width: 50%;
+      &__metar {
+        &__used {
+          &__circle {
+            height: 65%;
+            width: 2%;
+            left: 370px;
+          }
+        }
+      }
+
+      &__left {
+        margin-left: 0;
+        margin-right: 0;
+        top: -67px;
+        left: 376px;
+
+        &::after {
+          content: "";
+          position: absolute;
+          right: 0px;
+          bottom: -13px;
+          height: 27px;
+          border-left: 20px solid transparent;
+          border-bottom: 20px solid transparent;
+          border-right: 23px solid white;
+        }
+      }
+
+      &__used {
+        align-self: flex-start;
+        margin-left: 1.5rem;
+      }
+    }
+  }
+}
